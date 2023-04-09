@@ -1,10 +1,17 @@
 import React from 'react';
 import { MovieList } from '../MovieList/MovieList';
+import { Outlet } from 'react-router-dom';
 
 export const Movies = () => {
   return (
-    <div>
-      <MovieList />
+    <div className="movies">
+      <h1>Movies</h1>
+      <div className="movies-container">
+        <nav className="movie-list">
+          <MovieList />
+        </nav>
+        <Outlet />
+      </div>
     </div>
   );
 };
