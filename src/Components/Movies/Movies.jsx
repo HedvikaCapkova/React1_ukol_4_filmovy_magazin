@@ -1,6 +1,7 @@
 import React from 'react';
 import { MovieList } from '../MovieList/MovieList';
 import { Outlet } from 'react-router-dom';
+import './Movies.css';
 
 export const Movies = () => {
   return (

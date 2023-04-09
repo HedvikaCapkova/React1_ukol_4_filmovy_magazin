@@ -7,13 +7,16 @@ import {
   Outlet,
 } from 'react-router-dom';
 import { movies } from '../../movie-database';
+import './MovieList.css';
 
 export const MovieList = () => {
   return movies.map((movie) => {
     return (
-      <div key={movie.id}>
-        <Link to={movie.id.toString()}>{movie.title}</Link>
-      </div>
+      <Link
+        key={movie.id}
+        to={movie.id.toString()}>
+        {movie.title}
+      </Link>
     );
   });
 };
