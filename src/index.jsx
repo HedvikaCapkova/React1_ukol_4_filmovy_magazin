@@ -12,6 +12,7 @@ import { Home } from './Components/Home/Home';
 import { Articles } from './Components/Articles/Articles';
 import { Movies } from './Components/Movies/Movies';
 import { Movie } from './Components/Movie/Movie';
+import { MovieList } from './Components/MovieList/MovieList';
 import { ErrorPage } from './Components/ErrorPage/ErrorPage';
 import { Menu } from './Components/Menu/Menu';
 import './style.css';
@@ -24,11 +25,6 @@ const App = () => {
           <Menu />
         </nav>
       </div>
-      <main></main>
-
-      <footer>
-        <p>Czechitas, Digitální akademie: Web</p>
-      </footer>
     </>
   );
 };
@@ -46,7 +42,7 @@ const router = createBrowserRouter([
       {
         path: 'movies',
         element: <Movies />,
-        children: [{ path: '1', element: <Movie /> }],
+        children: [{ path: ':movieId', element: <Movie /> }],
       },
     ],
   },

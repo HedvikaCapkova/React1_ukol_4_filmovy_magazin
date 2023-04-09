@@ -9,9 +9,11 @@ import {
 import { movies } from '../../movie-database';
 
 export const MovieList = () => {
-  return movies.map((movie) => (
-    <div key={movie.id}>
-      <Link to="1">{movie.title}</Link>
-    </div>
-  ));
+  return movies.map((movie) => {
+    return (
+      <div key={movie.id}>
+        <Link to={movie.id.toString()}>{movie.title}</Link>
+      </div>
+    );
+  });
 };
